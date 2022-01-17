@@ -1,0 +1,55 @@
+
+/* CSS */
+.button {
+  background-color: #FAEBD7;
+  border-radius: 0px;
+  border: 1px solid #02070a;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #c60021;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #d3d4cf;
+  color: black;
+}
+
+.button:focus {
+  box-shadow: 0 0 0 4px rgba(12, 23, 32, 0.15);
+}
+
+.button:active {
+  background-color: #d1d4c7;
+  box-shadow: none;
+  color: #838580;
+}
+.buttonadd{
+  background-color:rgb(196, 193, 196);
+  margin-left: 90%;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  padding: 10px ;
+
+}
+.buttonadd:hover{
+  background-color:#B97A95;
+}

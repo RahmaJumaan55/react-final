@@ -1,0 +1,52 @@
+.room{
+  width: 30%;
+  border-radius: 5px ;
+  padding: 4%;
+  background-image: url("../assets/bookk.png");
+  background-position: center;
+  background-size: cover;
+  margin: 3%;
+  margin-right: 44px;
+  margin-left: 44px;
+  display: grid;
+  /* grid-template-columns: auto auto auto auto; */
+  /* grid-gap: 50px; */
+  background-color: white;
+  padding: 10px;
+  
+}
+
+.roomname{
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10%;
+    padding-top: 10%;
+    margin-bottom: 18%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.roombtn{
+    background-color:#B97A95;
+ 
+    border-radius: 10px;
+    font-size: 20px;
+    width: 70%;
+    height: 30%;
+    margin: 20%;
+    margin-top: 30%;
+}
+.roombtn:hover{
+    background-color:rgb(196, 193, 196);
+  }
+.Modal{
+  position: relative;
+  top: 200px;
+  right: 300px;
+  margin-bottom: 10%;
+  margin-right: 50%;
+  width: 100%;
+}
+.modal2{
+  position: absolute;
+  
+}
