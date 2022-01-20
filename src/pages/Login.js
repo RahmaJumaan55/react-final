@@ -1,39 +1,36 @@
 import { useContext } from "react"
-import { Form, Col, Row, Button } from "react-bootstrap"
 import BooksContext from "../utils/BooksContext"
+import styles from "./Login.module.css"
+import imgsign from "../assets/www.jpg"
+
+
 
 function Login() {
   const { login } = useContext(BooksContext)
   return (
-    <div className="ms-4">
-      <h1>Login</h1>
-      <Form className="mt-5" onSubmit={login}>
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column md="2">
-            Email
-          </Form.Label>
-          <Col md="6">
-            <Form.Control type="email" name="email" required />
-          </Col>
-        </Form.Group>
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column md="2">
-            password
-          </Form.Label>
-          <Col md="6">
-            <Form.Control type="password" name="password" required />
-          </Col>
-        </Form.Group>
-
-        <Form.Group as={Row} className="my-4">
-          <Col md={{ span: 10, offset: 2 }}>
-            <Button type="submit">Login</Button>
-          </Col>
-        </Form.Group>
-      </Form>
-    </div>
+    <div  className={styles.Login}>
+    <div className={styles.f1}>
+      <h2 className={styles.head}>LOG IN!</h2>
+      <form className={styles.Form} onSubmit={login}>
     
+        <label>Email:</label>
+        <input type="email" name="email" required />
+        <br />
+
+        <label>Password:</label>
+        <input type="password" name="password" required />
+        <br />
+
+        <button className={styles.button} type="submit">
+          Login
+        </button>
+      </form>
+    </div>
+    <img
+        className={styles.photo}
+        src={imgsign}
+      ></img>
+  </div>
   )
 }
-
 export default Login

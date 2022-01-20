@@ -1,65 +1,53 @@
 import { useContext } from "react"
 import { Form, Row, Col, Button } from "react-bootstrap"
 import BooksContext from "../utils/BooksContext"
+import styles from "./Signup.module.css"
+import imgsign from "../assets/www.jpg"
+// import bannerImage from "../assets/www.jpg"
 
 function SignUp() {
   const { signup } = useContext(BooksContext)
   return (
-    <div className="ms-4 mt-5">
-      <h1>Sign Up</h1>
-     <Form className="mt-5" onSubmit={signup}>
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column md="2">
-            First Name
-          </Form.Label>
-          <Col md="6">
-            <Form.Control name="firstName" type="text" required />
-          </Col>
-        </Form.Group>
+    <div  className={styles.SignUp}>
+    <div className={styles.f1}>
+      <h2 className={styles.head}>SIGN UP!</h2>
+      <form className={styles.Form} onSubmit={signup}>
+        <label>First Name:</label>
+        <input type="text" name="firstName" placeholder="Your first name.." required />
+        <br />
+        <label>Last Name:</label>
+        <input type="text" name="lastName" placeholder="Your last name.." required />
+        <br />
 
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column md="2">
-            Last Name
-          </Form.Label>
-          <Col md="6">
-            <Form.Control type="text" name="lastName" required />
-          </Col>
-        </Form.Group>
+        <label>Email:</label>
+        <input type="email" name="email" required />
+        <br />
 
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column md="2">
-            Email
-          </Form.Label>
-          <Col md="6">
-            <Form.Control type="email" name="email" required />
-          </Col>
-        </Form.Group>
+        <label>Password:</label>
+        <input type="password" name="password" required />
+        <br />
 
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column md="2">
-            Password
-          </Form.Label>
-          <Col md="6">
-            <Form.Control type="password" name="password" required />
-          </Col>
-        </Form.Group>
+        <label>Avatar:</label>
+        <input type="url" name="avatar" required />
+        <br />
 
-        <Form.Group as={Row} className="mb-3">
-          <Form.Label column md="2">
-            Image
-          </Form.Label>
-          <Col md="6">
-            <Form.Control type="url" name="avatar" required />
-          </Col>
-        </Form.Group>
-
-        <Form.Group as={Row} className="my-4">
-          <Col md={{ span: 10, offset: 2 }}>
-            <Button type="submit">Sign Up</Button>
-          </Col>
-        </Form.Group>
-      </Form> 
+        <button className={styles.button} type="submit">
+          Sign Up
+        </button>
+  
+      </form>
     </div>
+    <img
+        className={styles.photo}
+        src={imgsign}
+      ></img>
+    {/* <img
+        className={styles.photo}
+        src={imgsign}
+      /> */}
+  </div>
+
+  
   )
 }
 

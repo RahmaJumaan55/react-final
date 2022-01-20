@@ -28,10 +28,14 @@ function AddRoom(props) {
            <Row>
               {books.map(book => (
                 <Col md="3">
-                  <Col style={{ padding: "10%" }} >
-                    <Form.Check type="checkbox" name="books" value={book._id} />
-                    <Image style={{ width: "70%" }} src={book.poster} />
+                  <Col>
+                  <div class="custom-control custom-checkbox checkbox-xl">
+                  <input type="checkbox" name="books"  value={book._id} />
+                  {/* <input type="checkbox"  name="books" value={book._id}  ></input> */}
+                    {/* <Form.Check type="checkbox" name="books" value={book._id}  /> */}
+                    <Image style={{ width: "50%" }} src={book.poster} />
                     <p>{book.title}</p>
+                    </div>
                   </Col>
                 </Col>
               ))}

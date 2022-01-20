@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ViewReadingRoom from "./ViewReadingRoom"
 import styles from "./ReadingRoom.module.css"
+import {Row,Col} from "react-bootstrap"
 function ReadingRoomItem(props) {
   const { room } = props
   const [show, setShow] = useState(false)
@@ -10,15 +11,16 @@ function ReadingRoomItem(props) {
     <div>
         <div className={styles.room} >
               <div className={styles.roomname}>
-                <p>Room Name: {room.roomname}</p>
+                <p>Room Name:{room.roomname}</p>
               </div>
-              <div>
-              <button className={styles.roombtn} onClick={() => setShow(true)}>view room</button>
-              {/* <Bookreder bookpdf={book.bookpdf} /> */}
+              <div className={styles.roombtn}>
+              <button  onClick={() => setShow(true)}>view room</button>
               </div>
         <ViewReadingRoom show={show} setShow={setShow} room={room} />
         </div>
         </div>
+      
+        
   )
 } 
 {/* <>

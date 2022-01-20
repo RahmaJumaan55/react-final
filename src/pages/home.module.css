@@ -1,10 +1,20 @@
-
+h2{
+  color:#B97A95;
+  margin-left: 10%;
+  margin-top: 37px ;
+}
+.h2{
+  color:#B97A95;
+  margin-left: 35%;
+  margin-top: 77px ;
+  margin-bottom: 70px;
+}
 /* CSS */
-.button {
+/* .button {
   background-color: #FAEBD7;
   border-radius: 0px;
   border: 1px solid #02070a;
-  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-shadow: rgb(196, 193, 196);
   box-sizing: border-box;
   color: #c60021;
   cursor: pointer;
@@ -24,23 +34,23 @@
   touch-action: manipulation;
   vertical-align: baseline;
   white-space: nowrap;
-}
+} */
 
 .button:hover,
 .button:focus {
-  background-color: #d3d4cf;
+  background-color: white;
   color: black;
 }
 
-.button:focus {
+/* .button:focus {
   box-shadow: 0 0 0 4px rgba(12, 23, 32, 0.15);
-}
+} */
 
-.button:active {
+/* .button:active {
   background-color: #d1d4c7;
   box-shadow: none;
   color: #838580;
-}
+} */
 .buttonadd{
   background-color:rgb(196, 193, 196);
   margin-left: 90%;
@@ -52,4 +62,45 @@
 }
 .buttonadd:hover{
   background-color:#B97A95;
+}
+
+
+/* CSS */
+.button{
+  align-items: center;
+  background: rgb(196, 193, 196);
+  border: 0 solid #E2E8F0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  color: #1A202C;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 50px;
+  justify-content: center;
+  line-height: 24px;
+  overflow-wrap: break-word;
+  padding: 20px;
+  text-decoration: none;
+  width: 26%;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 1%;
+}
+/* .book{
+  background-color: black;
+  width: 70%;
+  margin-left: 40%;
+  margin-bottom: 100%;
+  
+} */
+
+.allbtn{
+  margin-left: 11%;
+  
+  
 }

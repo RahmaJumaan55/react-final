@@ -47,7 +47,7 @@ function NavbarItem() {
        </>
       ) : (
         <>
-          <li>
+          <li style={{marginLeft:"50%"}}>
             <Link to={"/SignUp"}>Signup </Link>
           </li>
           <li>

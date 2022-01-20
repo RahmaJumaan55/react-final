@@ -1,5 +1,5 @@
 import Home from "./pages/Home"
-import { Route, Routes, useNavigate } from "react-router-dom"
+import { Navigate, Route, Routes, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import BooksContext from "./utils/BooksContext"
@@ -143,6 +143,14 @@ function App() {
       else console.log(error)
     }
   }
+  const deleteComment = async (bookId, comment_id) => {
+    await axios.delete(`http://localhost:5000/api/books/${bookId}/comments/${comment_id}`, {
+      headers: {
+        Authorization: localStorage.tokenBooks,
+      },
+    })
+    getBooks()
+  }
   //-----------------------------------like book----------------------------------------------------------------//
 
   const likeBook = async bookId => {
@@ -201,6 +209,7 @@ function App() {
       })
       getProfile()
       toast.success("room added")
+      navigate("/ReadingRoom")
     } catch (error) {
       if (error.response) toast(error.response.data)
       else console.log(error)
@@ -225,6 +234,7 @@ function App() {
     deletebook,
     addRoom,
     getRooms,
+    deleteComment,
     rooms,
     
   }

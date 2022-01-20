@@ -1,0 +1,63 @@
+.f1 {
+    width: 50%;
+    text-align: left;
+    
+}
+
+.photo {
+    position: absolute;
+   top: 70%;
+   left: 57%;
+   /* bottom: 80%; */
+   width: 40%;
+   object-fit: contain;
+
+   }
+
+.head {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 33px;
+    text-align: center;
+    margin-right: 20%;
+
+
+}
+
+input, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(19, 20, 20);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.button {
+
+    width: 100%;
+    background-color: #B97A95;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.button:hover{
+  background-color: rgb(124, 117, 117);
+  color: white;
+}
+.Login{
+    padding-left: 10%;
+    width: 80%;
+    padding-top: 5%;
+    /* display: flex; */
+}

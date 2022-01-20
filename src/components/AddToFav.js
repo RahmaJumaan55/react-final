@@ -14,8 +14,8 @@ function AddToFav(props) {
 
   return (
     <>
-      <Button ref={target} onClick={() => likeBook(bookId)}>
-        <MdFavorite />{" "}
+      <Button  style={{backgroundColor:"#B97A95", border:"#B97A95", marginLeft:"40px",marginTop:"10px",marginBottom:"10px"}} ref={target} onClick={() => likeBook(bookId)}>
+        <MdFavorite />
       </Button>
       <Overlay target={target.current} show={show} placement="right">
         {props => (

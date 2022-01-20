@@ -12,7 +12,7 @@ function ReadBookModal(props) {
     // console.log(bookFound);
 
     return ( 
-        <Modal size="lg"  show={bookShow} onHide={() => setbookShow(false)}>
+        <Modal size="lg"  fullscreen show={bookShow} onHide={() => setbookShow(false)}>
        
           <Modal.Header closeButton>
             <Modal.Title>{book.title}</Modal.Title>

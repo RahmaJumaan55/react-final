@@ -4,6 +4,9 @@ import AddToFav from "../components/AddToFav"
 import BookItem from "../components/BookItem"
 import EditProfile from "../components/EditProfile"
 import BooksContext from "../utils/BooksContext"
+import styles from "./Profile.module.css"
+import {FaEdit} from "react-icons/fa"
+
 
 function Profile() {
   const [editShow, setEditShow] = useState(false)
@@ -12,39 +15,38 @@ function Profile() {
   console.log(profile.likes)
 
   return (
-    <>
-      <Container>
-        <Row
+    <div>
+      <Container >
+        {/* <Row
           style={{
-            // backgroundColor: `rgba(50,12,240, 0.3)`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
             display: "flex",
             alignItems: "center",
           }}
-        >
+        > */}
           <Col md="4">
-            <img variant="top" src={profile.avatar} width="50%" style={{ borderRadius: "10px", margin: "20px" }} />
+            <img  src={profile.avatar} className={styles.avatar}  />
           </Col>
           <Col>
-            <h1>
+            <div className={styles.name}>
               {profile.firstName} {profile.lastName}
-            </h1>
+            </div>
 
-            <p>{profile.email}</p>
+            <p className={styles.email}>{profile.email}</p>
           </Col>
-        </Row>
-        <Button onClick={() => setEditShow(true)}>Edit</Button>
+        {/* </Row> */}
+        <button onClick={() => setEditShow(true)} className={styles.btn}>  Edit  <FaEdit/></button>
         <Row className="mt-5">
-          <h3>Favourite books</h3>
+          <h3 className={styles.h3}>Favourite books</h3>
           {profile.likes.map(book => (
             <BookItem book={book} key={book._id} />
           ))}
         </Row>
       </Container>
       <EditProfile show={editShow} setShow={setEditShow} profile={profile} />
-    </>
+    </div>
   )
 }
 

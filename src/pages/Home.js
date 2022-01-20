@@ -9,9 +9,8 @@ import OneBook from "./OneBook"
 import BookList from "../components/BookList"
 import styles from "./home.module.css"
 import {BsDoorClosed} from "react-icons/bs"
+import Footer from "../components/Footer"
 // import bannerImage from "../assets/reffff.jpg"
-
-
 
 function Home(props) {
   const [AddRoomShow, setAddShow] = useState(false)
@@ -23,10 +22,9 @@ function Home(props) {
        Add Room <BsDoorClosed/> </button>
          <Showcase />
       <AddRoom show={AddRoomShow} setShow={setAddShow} AddRoom={AddRoom}  />
-
-     
+      <h2>All Books</h2>
             <BookList  />
-    
+            <Footer />
             {/* <Row
         style={{
           backgroundImage: `url("${bannerImage}")`,
@@ -45,6 +43,7 @@ function Home(props) {
         }}
       >
         </Row> */}
+       
     </>
   )
 }

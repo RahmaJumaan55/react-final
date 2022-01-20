@@ -14,13 +14,13 @@ function AddComment(prpos) {
             Comment
           </Form.Label>
           <Col md="6">
-            <Form.Control as="textarea" name="comment" required />
+            <Form.Control as="textarea" name="comment" style={{borderColor:"black"}}  required />
           </Col>
         </Form.Group>
 
         <Form.Group as={Row} className="my-4">
-          <Col md={{ span: 10, offset: 2 }}>
-            <Button type="submit">Add</Button>
+          <Col md={{ span: 10, offset: 2  }} >
+            <Button  style={{marginLeft:"650px",marginTop:"-130px"}}variant="dark" type="submit">Add</Button>
           </Col>
         </Form.Group>
       </Form>

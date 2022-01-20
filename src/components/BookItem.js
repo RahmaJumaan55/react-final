@@ -6,15 +6,11 @@ function bookItem(props) {
 
   return (
     <Col md="2">
-      <Card border="light" style={{ maxWidth: "200px" }}>
-        <Card.Body>
-          <Card.Text className="text-muted">
-            {book.title}
-            <Image src={book.poster} width="80px" />
-          </Card.Text>
+    
+        <Image src={book.poster} width="130px" />
+         
+           {/* <p>{book.title}</p>  */}
           <AddToFav bookId={book._id}/>
-        </Card.Body>
-      </Card>
     </Col>
   )
 }
